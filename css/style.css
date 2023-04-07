@@ -1,0 +1,482 @@
+*:focus {
+  outline: none;
+}
+
+* {
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  outline: 1px solid black;
+}
+
+body {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+}
+
+.primary-btn {
+  background: linear-gradient(109.48deg, #4523B0 36.94%, #6E8EFF 141.52%);
+  border-radius: 72.5px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 22px;
+  padding: 16px 0px;
+  text-align: center;
+}
+
+@font-face {
+  font-family: "Franie";
+  src: url("/fonts/WOFF2/Franie-Black.woff2") format("woff2"), url("/fonts/WOFF/Franie-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franie";
+  src: url("/fonts/WOFF2/Franie-BlackItalic.woff2") format("woff2"), url("/fonts/WOFF/Franie-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franie";
+  src: url("/fonts/WOFF2/Franie-Bold.woff2") format("woff2"), url("/fonts/WOFF/Franie-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franie";
+  src: url("/fonts/WOFF2/Franie-BoldItalic.woff2") format("woff2"), url("/fonts/WOFF/Franie-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franie Hair";
+  src: url("/fonts/WOFF2/Franie-HairItalic.woff2") format("woff2"), url("/fonts/WOFF/Franie-HairItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franie Hair";
+  src: url("/fonts/WOFF2/") format("woff2"), url("/fonts/WOFF/Franie-Hair.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franie";
+  src: url("/fonts/WOFF2/Franie-ExtraBold.woff2") format("woff2"), url("/fonts/WOFF/Franie-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franie";
+  src: url("/fonts/WOFF2/Franie-SemiLight.woff2") format("woff2"), url("/fonts/WOFF/Franie-SemiLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franie";
+  src: url("/fonts/WOFF2/Franie-Regular.woff2") format("woff2"), url("/fonts/WOFF/Franie-Regular.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franie SemiLight";
+  src: url("/fonts/WOFF2/Franie-SemiBold.woff2") format("woff2"), url("/fonts/WOFF/Franie-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franie";
+  src: url("/fonts/WOFF2/Franie-Italic.woff2") format("woff2"), url("/fonts/WOFF/Franie-Italic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franie Hair";
+  src: url("/fonts/WOFF2/Franie-Light.woff2") format("woff2"), url("/fonts/WOFF/Franie-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franie";
+  src: url("/fonts/WOFF2/Franie-ExtraBoldItalic.woff2") format("woff2"), url("/fonts/WOFF/Franie-ExtraBoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franie";
+  src: url("/fonts/WOFF2/Franie-ExtraLight.woff2") format("woff2"), url("/fonts/WOFF/Franie-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franie";
+  src: url("/fonts/WOFF2/Franie-SemiBoldItalic.woff2") format("woff2"), url("/fonts/WOFF/Franie-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franie";
+  src: url("/fonts/WOFF2/Franie-ExtraLightItalic.woff2") format("woff2"), url("/fonts/WOFF/Franie-ExtraLightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franie";
+  src: url("/fonts/WOFF2/Franie-LightItalic.woff2") format("woff2"), url("/fonts/WOFF/Franie-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Franie SemiLight";
+  src: url("/fonts/WOFF2/Franie-SemiLightItalic.woff2") format("woff2"), url("/fonts/WOFF/Franie-SemiLightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/WOFF2/Satoshi-Bold.woff2") format("woff2"), url("/fonts/WOFF/Satoshi-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/WOFF2/Satoshi-Italic.woff2") format("woff2"), url("/fonts/WOFF/Satoshi-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/WOFF2/Satoshi-Black.woff2") format("woff2"), url("/fonts/WOFF/Satoshi-Black.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/WOFF2/Satoshi-Regular.woff2") format("woff2"), url("/fonts/WOFF/Satoshi-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/WOFF2/Satoshi-Medium.woff2") format("woff2"), url("/fonts/WOFF/Satoshi-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/WOFF2/Satoshi-Light.woff2") format("woff2"), url("/fonts/WOFF/Satoshi-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/WOFF2/Satoshi-MediumItalic.woff2") format("woff2"), url("/fonts/WOFF/Satoshi-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/WOFF2/Satoshi-LightItalic.woff2") format("woff2"), url("/fonts/WOFF/Satoshi-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+* {
+  font-family: "Satoshi";
+  transition: 0.3s;
+}
+
+.closure {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  background: rgb(177, 177, 177);
+}
+
+nav.sidebar {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  padding: 0.1px;
+  transition: 0.8s;
+  background: rgb(177, 177, 177);
+}
+nav.sidebar > button {
+  background: none;
+  border: none;
+  float: right;
+  margin: 30px 20px 0px 0px;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0;
+}
+nav.sidebar > button:hover {
+  cursor: pointer;
+}
+nav.sidebar > button img {
+  width: 50px;
+}
+nav.sidebar ul {
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  margin-top: 100px;
+  padding: 0;
+  margin-left: 50px;
+  width: -moz-max-content;
+  width: max-content;
+}
+nav.sidebar ul li {
+  display: block;
+  margin-bottom: 20px;
+}
+nav.sidebar ul li a {
+  display: block;
+  padding: 10px 80px 10px 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 22px;
+  text-decoration: none;
+  color: white;
+}
+nav.sidebar .primary-btn {
+  display: block;
+  margin-left: 50px;
+  width: 200px;
+  position: absolute;
+  bottom: 5vh;
+}
+
+nav.sidebar.closed {
+  margin-left: -100vh;
+}
+
+header .margin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: 90px;
+  margin: auto;
+}
+header a.sitepin {
+  display: block;
+}
+header a.sitepin img {
+  width: 80px;
+}
+header nav {
+  display: none;
+}
+header a.primary-btn {
+  display: none;
+}
+header button.hamburger {
+  background: none;
+  border: none;
+  width: 40px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+header button.hamburger:hover {
+  cursor: pointer;
+}
+header button.hamburger > div {
+  height: 4px;
+  border-radius: 2px;
+  background: white;
+}
+header button.hamburger > div:nth-child(1) {
+  width: 100%;
+  margin-bottom: 5px;
+}
+header button.hamburger > div:nth-child(2) {
+  width: 66%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-name {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 8vh;
+}
+.hero-name > div {
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+}
+.hero-name > div h1 {
+  text-align: center;
+  font-size: 3.125rem;
+  font-family: "Franie";
+  color: white;
+  font-weight: 500;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+.hero-name > div img {
+  width: 70px;
+  position: absolute;
+  z-index: 2;
+  top: -50%;
+  right: -34px;
+  transform: rotate(35.16deg);
+  z-index: 0;
+}
+.hero-name > div:after {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -1px;
+  right: -5px;
+  width: 21px;
+  height: 15.48px;
+  background: #1A1A1C;
+  filter: blur(2.5px);
+  transform: rotate(20.82deg);
+}
+.hero-name > p {
+  width: 100%;
+  text-align: center;
+  color: white;
+  width: 70%;
+  margin: auto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.hero-name > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(97.41deg, #D9D9D9 -192.76%, rgba(19, 0, 86, 0.38) -45.22%, rgba(217, 217, 217, 0) 111.83%);
+  -webkit-backdrop-filter: blur(22px);
+          backdrop-filter: blur(22px);
+  border: none;
+  color: white;
+  width: 45%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 13px 0px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+.hero-name > button:hover {
+  cursor: pointer;
+}
+.hero-name > button img {
+  width: 26px;
+}
+
+.hero-img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero-img-in {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-img-in > div {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  border-radius: 100%;
+  width: 120vw;
+  margin: auto;
+  margin-left: 1vw;
+  max-width: 800px;
+}
+.hero-img-in > div > div {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(150.047px);
+}
+.hero-img-in > div > div div {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(150.95deg, #7D6EB1 7.67%, #7D6EB1 147.46%);
+}
+.hero-img-in > div img {
+  position: relative;
+  width: 100%;
+  opacity: 0.4;
+  border-radius: 100%;
+  z-index: 3;
+  margin-top: 10px;
+}
+.hero-img-in > img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin: auto;
+  margin-left: 5px;
+}

@@ -1,0 +1,240 @@
+$Franie: 'Franie';
+$Satoshi: 'Satoshi';
+
+@font-face {
+   font-family: 'Franie';
+   src: url('/fonts/WOFF2/Franie-Black.woff2') format('woff2'),
+       url('/fonts/WOFF/Franie-Black.woff') format('woff');
+   font-weight: 900;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Franie';
+   src: url('/fonts/WOFF2/Franie-BlackItalic.woff2') format('woff2'),
+       url('/fonts/WOFF/Franie-BlackItalic.woff') format('woff');
+   font-weight: 900;
+   font-style: italic;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Franie';
+   src: url('/fonts/WOFF2/Franie-Bold.woff2') format('woff2'),
+       url('/fonts/WOFF/Franie-Bold.woff') format('woff');
+   font-weight: bold;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Franie';
+   src: url('/fonts/WOFF2/Franie-BoldItalic.woff2') format('woff2'),
+       url('/fonts/WOFF/Franie-BoldItalic.woff') format('woff');
+   font-weight: bold;
+   font-style: italic;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Franie Hair';
+   src: url('/fonts/WOFF2/Franie-HairItalic.woff2') format('woff2'),
+       url('/fonts/WOFF/Franie-HairItalic.woff') format('woff');
+   font-weight: 100;
+   font-style: italic;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Franie Hair';
+   src: url('/fonts/WOFF2/') format('woff2'),
+       url('/fonts/WOFF/Franie-Hair.woff') format('woff');
+   font-weight: 100;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Franie';
+   src: url('/fonts/WOFF2/Franie-ExtraBold.woff2') format('woff2'),
+       url('/fonts/WOFF/Franie-ExtraBold.woff') format('woff');
+   font-weight: bold;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Franie';
+   src: url('/fonts/WOFF2/Franie-SemiLight.woff2') format('woff2'),
+       url('/fonts/WOFF/Franie-SemiLight.woff') format('woff');
+   font-weight: 300;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Franie';
+   src: url('/fonts/WOFF2/Franie-Regular.woff2') format('woff2'),
+       url('/fonts/WOFF/Franie-Regular.woff') format('woff');
+   font-weight: 500;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Franie SemiLight';
+   src: url('/fonts/WOFF2/Franie-SemiBold.woff2') format('woff2'),
+       url('/fonts/WOFF/Franie-SemiBold.woff') format('woff');
+   font-weight: 600;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Franie';
+   src: url('/fonts/WOFF2/Franie-Italic.woff2') format('woff2'),
+       url('/fonts/WOFF/Franie-Italic.woff') format('woff');
+   font-weight: 500;
+   font-style: italic;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Franie Hair';
+   src: url('/fonts/WOFF2/Franie-Light.woff2') format('woff2'),
+       url('/fonts/WOFF/Franie-Light.woff') format('woff');
+   font-weight: 300;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Franie';
+   src: url('/fonts/WOFF2/Franie-ExtraBoldItalic.woff2') format('woff2'),
+       url('/fonts/WOFF/Franie-ExtraBoldItalic.woff') format('woff');
+   font-weight: bold;
+   font-style: italic;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Franie';
+   src: url('/fonts/WOFF2/Franie-ExtraLight.woff2') format('woff2'),
+       url('/fonts/WOFF/Franie-ExtraLight.woff') format('woff');
+   font-weight: 200;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Franie';
+   src: url('/fonts/WOFF2/Franie-SemiBoldItalic.woff2') format('woff2'),
+       url('/fonts/WOFF/Franie-SemiBoldItalic.woff') format('woff');
+   font-weight: 600;
+   font-style: italic;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Franie';
+   src: url('/fonts/WOFF2/Franie-ExtraLightItalic.woff2') format('woff2'),
+       url('/fonts/WOFF/Franie-ExtraLightItalic.woff') format('woff');
+   font-weight: 200;
+   font-style: italic;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Franie';
+   src: url('/fonts/WOFF2/Franie-LightItalic.woff2') format('woff2'),
+       url('/fonts/WOFF/Franie-LightItalic.woff') format('woff');
+   font-weight: 300;
+   font-style: italic;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Franie SemiLight';
+   src: url('/fonts/WOFF2/Franie-SemiLightItalic.woff2') format('woff2'),
+       url('/fonts/WOFF/Franie-SemiLightItalic.woff') format('woff');
+   font-weight: 300;
+   font-style: italic;
+   font-display: swap;
+}
+
+
+
+@font-face {
+   font-family: 'Satoshi';
+   src: url('/fonts/WOFF2/Satoshi-Bold.woff2') format('woff2'),
+       url('/fonts/WOFF/Satoshi-Bold.woff') format('woff');
+   font-weight: bold;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Satoshi';
+   src: url('/fonts/WOFF2/Satoshi-Italic.woff2') format('woff2'),
+       url('/fonts/WOFF/Satoshi-Italic.woff') format('woff');
+   font-weight: normal;
+   font-style: italic;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Satoshi';
+   src: url('/fonts/WOFF2/Satoshi-Black.woff2') format('woff2'),
+       url('/fonts/WOFF/Satoshi-Black.woff') format('woff');
+   font-weight: bold;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Satoshi';
+   src: url('/fonts/WOFF2/Satoshi-Regular.woff2') format('woff2'),
+       url('/fonts/WOFF/Satoshi-Regular.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Satoshi';
+   src: url('/fonts/WOFF2/Satoshi-Medium.woff2') format('woff2'),
+       url('/fonts/WOFF/Satoshi-Medium.woff') format('woff');
+   font-weight: 500;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Satoshi';
+   src: url('/fonts/WOFF2/Satoshi-Light.woff2') format('woff2'),
+       url('/fonts/WOFF/Satoshi-Light.woff') format('woff');
+   font-weight: 300;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Satoshi';
+   src: url('/fonts/WOFF2/Satoshi-MediumItalic.woff2') format('woff2'),
+       url('/fonts/WOFF/Satoshi-MediumItalic.woff') format('woff');
+   font-weight: 500;
+   font-style: italic;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Satoshi';
+   src: url('/fonts/WOFF2/Satoshi-LightItalic.woff2') format('woff2'),
+       url('/fonts/WOFF/Satoshi-LightItalic.woff') format('woff');
+   font-weight: 300;
+   font-style: italic;
+   font-display: swap;
+}
+
+

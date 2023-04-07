@@ -1,0 +1,13 @@
+*:focus {
+    outline: none;
+}
+* {
+   transition: .3s;
+   box-sizing: border-box;
+}
+html {
+   scroll-behavior: smooth;
+}
+body {
+   margin: 0;
+}

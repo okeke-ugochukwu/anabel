@@ -1,0 +1,5 @@
+@mixin hoverPinter {
+   &:hover {
+      cursor: pointer;
+   }
+}
