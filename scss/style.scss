@@ -23,13 +23,14 @@
 //SIDEBAR
 nav.sidebar {
    width: 100vw;
+   max-width: 500px;
    height: 100vh;
    position: absolute;
    z-index: 10;
    top: 0;
    left: 0;
    padding: 0.1px;
-   transition: .8s;
+   transition: .5s;
    background: rgb(177, 177, 177);
 //    background: $deepPurple;
 
@@ -42,12 +43,15 @@ nav.sidebar {
       width: max-content;
       height: max-content;
       padding: 0;
-      @include hoverPinter;
+      @include hoverPointer;
 
       img {
          width: 50px;
       }
       
+      &:hover {
+         opacity: .7;
+      }
    }
 
    //navigation links
@@ -86,7 +90,7 @@ nav.sidebar {
    }
 }
 nav.sidebar.closed {
-   margin-left: -100vh;
+   margin-left: -100vw;
 }
 
 
@@ -127,7 +131,7 @@ header {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      @include hoverPinter;
+      @include hoverPointer;
 
       & > div {
          height: 4px;
@@ -144,6 +148,10 @@ header {
             width: 66%;
          }
       }
+
+      &:hover {
+         opacity: .7;
+      }
    }
 }
 
@@ -153,14 +161,13 @@ main {
    height: 100%;
    overflow: hidden;
 }
-
-//'anabel' + hat
 .hero-name {
    max-width: 500px;
    margin: auto;
    margin-top: 8vh;
-
-   & > div {
+   
+   //'anabel' + hat
+   & > div:first-child {
       position: relative;
       width: max-content;
       margin: auto;
@@ -182,7 +189,7 @@ main {
          z-index: 2;
          top: -50%;
          right: -34px;
-         transform: rotate(35.16deg);
+         transform: rotate(16.16deg);
          z-index: 0;
       }
 
@@ -201,38 +208,56 @@ main {
       }
    }
 
-
-   & > p {
-      width: 100%;
-      text-align: center;
-      color: $white;
-      width: 70%;
-      margin: auto;
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 22px;
-   }
-
-   & > button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      background: linear-gradient(97.41deg, #D9D9D9 -192.76%, rgba(19, 0, 86, 0.38) -45.22%, rgba(217, 217, 217, 0) 111.83%);
-      backdrop-filter: blur(22px);
-      border: none;
-      color: $white;
-      width: 45%;
-      margin: auto;
-      margin-top: 20px;
-      padding: 13px 0px;
-      border-radius: 20px;
-      font-weight: 500;
-      @include hoverPinter;
-
-      img {
-         width: 26px;
+   //descr + trailer btn
+   & > div:nth-child(2) {
+      p {
+         width: 100%;
+         text-align: center;
+         color: $white;
+         width: 70%;
+         margin: auto;
+         font-size: 12px;
+         font-weight: 400;
+         line-height: 22px;
       }
+   
+      button {
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 10px;
+         background: linear-gradient(97.41deg, #D9D9D9 -192.76%, rgba(19, 0, 86, 0.38) -45.22%, rgba(217, 217, 217, 0) 111.83%);
+         backdrop-filter: blur(22px);
+         border: none;
+         color: $white;
+         width: 45%;
+         margin: auto;
+         margin-top: 20px;
+         padding: 13px 0px;
+         border-radius: 20px;
+         font-weight: 500;
+         @include hoverPointer;
+   
+         //play icon
+         img:nth-child(1) {
+            width: 26px;
+         }
+
+         //magic brush
+         img:nth-child(3) {
+            transform: rotate(17.68deg);
+            width: 48px;
+            position: absolute;
+            margin-left: 57px;
+            bottom: -30px;
+         }
+         
+         img.hidden {
+            display: none;
+         }
+      }
+      
    }
 
 }
@@ -300,4 +325,44 @@ main {
       margin-left: 5px;
    }
 }
+
+button.animation-control {
+   position: absolute;
+   z-index: 4;
+   bottom: 5vh;
+   right: 30px;
+   width: 60px;
+   height: 60px;
+   padding: 0;
+   background: transparent;
+   border: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   @include hoverPointer;
+
+   img {
+      width: 100%;
+
+      //png
+      &:nth-child(1) {
+
+      }
+
+      //gif
+      &:nth-child(2) {
+         width: 100px;
+      }
+
+      &.shown {
+         display: block;
+      }
+
+      &.hidden {
+         display: none;
+      }
+   }
+}
+
+@import './mini/resQueries';
 

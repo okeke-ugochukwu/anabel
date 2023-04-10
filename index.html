@@ -71,19 +71,23 @@
                   <img src="/img/disney.svg" alt="logo">
                </a>
    
-               <!-- NAVIGATION LINKS -->
-               <nav>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Episodes</a></li>
-                  <li><a href="#">Cast</a></li>
-                  <li><a href="#">Plot</a></li>
-                  <li><a href="#">Disney Club</a></li>
-               </nav>
-   
-               <!-- ACTION BTN -->
-               <a href="#" class="primary-btn">
-                  Create Account
-               </a>
+               <div>
+                  <!-- NAVIGATION LINKS -->
+                  <nav>
+                     <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Episodes</a></li>
+                        <li><a href="#">Cast</a></li>
+                        <li><a href="#">Plot</a></li>
+                        <li><a href="#">Disney Club</a></li>
+                     </ul>
+                  </nav>
+      
+                  <!-- ACTION BTN -->
+                  <a href="#" class="primary-btn">
+                     Create Account
+                  </a>
+               </div>
 
                <!-- HAMBURGER -->
                <button class="hamburger" onclick="OPEN_SIDEBAR()"> 
@@ -106,18 +110,22 @@
                   <img src="/img/magician-hat.svg" alt="magic-hat">
                </div>
 
-               <p>
-                  Anabel, a young artist discovers her magical brush can bring paintings to life, thrusting her into an 
-                  enchanting adventure to save a vibrant, imperiled world hidden within her art.
-               </p>
+               <div>
+                  <p>
+                     Anabel, a young artist discovers her magical brush can bring paintings to life, thrusting her into an 
+                     enchanting adventure to save a vibrant, imperiled world hidden within her art.
+                  </p>
+   
+                  <button>
+                     <img src="/img/play-circle.svg" alt="play">
+                     <span>
+                        Watch Trailer
+                     </span>
 
-               <button>
-                  <img src="/img/play-circle.svg" alt="play">
-                  <span>
-                     Watch Trailer
-                  </span>
-               </button>
-               
+                     <img src="/img/brush.gif" alt="magic-brush" class="magic-brush-ani hidden">
+                  </button>
+               </div>
+        
             </div>
 
             <div class="hero-img">
@@ -136,6 +144,17 @@
             </div>
          </main>
 
+         <!-- ANIMATION CONTROL -->
+         <button 
+            type="button" role="button" 
+            class="animation-control" 
+            onclick="TOGGLE_ANIMATION()"
+            onmousedown="MINI_HOVER()"
+            onmouseup="MINI_HOVER_ALT()"
+         >
+            <img src="/img/magic-eye.png" alt="start-stop-animation" class="shown magic-eye-static">
+            <img src="/img/magic-eye.gif" alt="start-stop-animation" class="hidden magic-eye-ani">
+         </button>
        </div>
  
         <script src="js/script.js"></script>

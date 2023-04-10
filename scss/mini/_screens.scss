@@ -1,0 +1,29 @@
+@mixin tabs-mini {
+   @media (min-width: 600px) {
+       @content;   
+   }
+}
+
+@mixin tabs {
+   @media (min-width: 768px) {
+       @content;   
+   }
+}
+
+@mixin laps-mini {
+   @media (min-width: 1024px) {
+       @content;   
+   }
+}
+
+@mixin laps {
+   @media (min-width: 1200px) {
+       @content;   
+   }
+}
+
+@mixin desktop {
+   @media (min-width: 1200px) {
+       @content;   
+   }
+}

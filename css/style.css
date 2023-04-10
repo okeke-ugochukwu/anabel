@@ -17,6 +17,8 @@ body {
 
 * {
   outline: 1px solid black;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -236,13 +238,14 @@ img {
 
 nav.sidebar {
   width: 100vw;
+  max-width: 500px;
   height: 100vh;
   position: absolute;
   z-index: 10;
   top: 0;
   left: 0;
   padding: 0.1px;
-  transition: 0.8s;
+  transition: 0.5s;
   background: rgb(177, 177, 177);
 }
 nav.sidebar > button {
@@ -261,6 +264,9 @@ nav.sidebar > button:hover {
 }
 nav.sidebar > button img {
   width: 50px;
+}
+nav.sidebar > button:hover {
+  opacity: 0.7;
 }
 nav.sidebar ul {
   list-style-type: none;
@@ -294,7 +300,7 @@ nav.sidebar .primary-btn {
 }
 
 nav.sidebar.closed {
-  margin-left: -100vh;
+  margin-left: -100vw;
 }
 
 header .margin {
@@ -341,6 +347,9 @@ header button.hamburger > div:nth-child(1) {
 header button.hamburger > div:nth-child(2) {
   width: 66%;
 }
+header button.hamburger:hover {
+  opacity: 0.7;
+}
 
 main {
   width: 100%;
@@ -353,13 +362,13 @@ main {
   margin: auto;
   margin-top: 8vh;
 }
-.hero-name > div {
+.hero-name > div:first-child {
   position: relative;
   width: -moz-max-content;
   width: max-content;
   margin: auto;
 }
-.hero-name > div h1 {
+.hero-name > div:first-child h1 {
   text-align: center;
   font-size: 3.125rem;
   font-family: "Franie";
@@ -369,16 +378,16 @@ main {
   position: relative;
   z-index: 2;
 }
-.hero-name > div img {
+.hero-name > div:first-child img {
   width: 70px;
   position: absolute;
   z-index: 2;
   top: -50%;
   right: -34px;
-  transform: rotate(35.16deg);
+  transform: rotate(16.16deg);
   z-index: 0;
 }
-.hero-name > div:after {
+.hero-name > div:first-child:after {
   display: block;
   content: "";
   position: absolute;
@@ -391,7 +400,7 @@ main {
   filter: blur(2.5px);
   transform: rotate(20.82deg);
 }
-.hero-name > p {
+.hero-name > div:nth-child(2) p {
   width: 100%;
   text-align: center;
   color: white;
@@ -401,7 +410,8 @@ main {
   font-weight: 400;
   line-height: 22px;
 }
-.hero-name > button {
+.hero-name > div:nth-child(2) button {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -418,11 +428,21 @@ main {
   border-radius: 20px;
   font-weight: 500;
 }
-.hero-name > button:hover {
+.hero-name > div:nth-child(2) button:hover {
   cursor: pointer;
 }
-.hero-name > button img {
+.hero-name > div:nth-child(2) button img:nth-child(1) {
   width: 26px;
+}
+.hero-name > div:nth-child(2) button img:nth-child(3) {
+  transform: rotate(17.68deg);
+  width: 48px;
+  position: absolute;
+  margin-left: 57px;
+  bottom: -30px;
+}
+.hero-name > div:nth-child(2) button img.hidden {
+  display: none;
 }
 
 .hero-img {
@@ -479,4 +499,235 @@ main {
   width: 100%;
   margin: auto;
   margin-left: 5px;
+}
+
+button.animation-control {
+  position: absolute;
+  z-index: 4;
+  bottom: 5vh;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button.animation-control:hover {
+  cursor: pointer;
+}
+button.animation-control img {
+  width: 100%;
+}
+button.animation-control img:nth-child(2) {
+  width: 100px;
+}
+button.animation-control img.shown {
+  display: block;
+}
+button.animation-control img.hidden {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .hero-name > div:first-child h1 {
+    font-size: 90px;
+  }
+  .hero-name > div:first-child img {
+    width: 90px;
+    top: -38%;
+    right: -40px;
+  }
+  .hero-name > div:first-child:after {
+    top: 2px;
+    right: 0px;
+  }
+  .hero-name > div:nth-child(2) p {
+    font-size: 15px;
+    line-height: 1.6rem;
+    width: 90%;
+  }
+  .hero-name > div:nth-child(2) button {
+    font-size: 16px;
+  }
+  .hero-name > div:nth-child(2) button img:nth-child(1) {
+    width: 30px;
+  }
+  .hero-name > div:nth-child(2) button img:nth-child(3) {
+    width: 65px;
+    margin-left: 70px;
+    bottom: -50px;
+  }
+}
+@media (min-width: 768px) {
+  header .margin {
+    width: 85%;
+    height: 120px;
+  }
+  header a.sitepin img {
+    width: 100px;
+  }
+  header button.hamburger {
+    width: 50px;
+  }
+  .hero-name > div:nth-child(2) p {
+    font-size: 15px;
+    line-height: 1.6rem;
+    width: 90%;
+  }
+  .hero-name > div:nth-child(2) button {
+    font-size: 16px;
+  }
+  .hero-name > div:nth-child(2) button img:nth-child(1) {
+    width: 30px;
+  }
+  .hero-name > div:nth-child(2) button img:nth-child(3) {
+    width: 65px;
+    bottom: -50px;
+  }
+  .hero-img-in {
+    max-width: 500px;
+  }
+  button.animation-control {
+    bottom: 5vh;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+  }
+  button.animation-control img:nth-child(2) {
+    width: 125px;
+  }
+}
+@media (min-width: 1024px) {
+  header .margin {
+    width: 90%;
+    height: 120px;
+  }
+  header .margin > div {
+    display: flex;
+    align-items: center;
+  }
+  header nav {
+    display: block;
+  }
+  header nav ul {
+    list-style-type: none;
+  }
+  header nav ul li {
+    display: inline;
+  }
+  header nav ul li:not(:nth-child(1)) {
+    margin-left: 40px;
+  }
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  header a.primary-btn {
+    display: block;
+    width: 170px;
+    padding: 12px 0px;
+    margin-left: 20px;
+  }
+  header button.hamburger {
+    display: none;
+  }
+  header a, header a.primary-btn {
+    font-size: 14px;
+  }
+  .hero-name {
+    margin-top: 10vh;
+    position: relative;
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+  .hero-name > div:first-child h1 {
+    font-size: 8.125rem;
+  }
+  .hero-name > div:first-child img {
+    width: 100px;
+    top: -23%;
+    right: -32px;
+  }
+  .hero-name > div:first-child:after {
+    width: 30px;
+    height: 18px;
+    top: 7px;
+    right: 2px;
+  }
+  .hero-name > div:nth-child(2) {
+    padding: 22px 25px 35px 22px;
+    position: absolute;
+    z-index: 2;
+    bottom: -200px;
+    right: -180px;
+    width: 307.2px;
+    transform: scale(0.9);
+  }
+  .hero-name > div:nth-child(2) P {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 18px;
+    line-height: 1.55rem;
+  }
+  .hero-name > div:nth-child(2) button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+  }
+  .hero-name > div:nth-child(2) button img:nth-child(1) {
+    width: 40px;
+    margin-right: 10px;
+  }
+  .hero-name > div:nth-child(2) button img:nth-child(3) {
+    width: 75px;
+    bottom: -30px;
+    margin-left: 73px;
+  }
+  .hero-name > div:nth-child(2) p, .hero-name > div:nth-child(2) button {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-name {
+    margin-top: 10vh;
+    position: relative;
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+  .hero-name > div:first-child img {
+    width: 120px;
+    top: -30%;
+    right: -40px;
+  }
+  .hero-name > div:first-child:after {
+    width: 30px;
+    height: 17px;
+    top: 7px;
+    right: 2px;
+  }
+  .hero-name > div:nth-child(2) {
+    padding: 22px 25px 40px 22px;
+    right: -230px;
+    width: 27.5vw;
+    max-width: 402px;
+  }
+  .hero-name > div:nth-child(2) button img:nth-child(3) {
+    bottom: -27px;
+    margin-left: 83px;
+  }
+  .hero-name > div:nth-child(2) p, .hero-name > div:nth-child(2) button {
+    font-size: 14px;
+  }
+  .hero-img-in {
+    max-width: 600px;
+  }
+  button.animation-control {
+    right: 60px;
+  }
 }
