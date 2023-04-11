@@ -22,8 +22,14 @@
    }
 }
 
-@mixin desktop {
-   @media (min-width: 1200px) {
+@mixin desktops {
+   @media (min-width: 1440px) {
+       @content;   
+   }
+}
+
+@mixin desktopsX {
+   @media (min-width: 1550px) {
        @content;   
    }
 }

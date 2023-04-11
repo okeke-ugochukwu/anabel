@@ -177,7 +177,7 @@
       }
 
       a, a.primary-btn {
-         font-size: 14px;
+         font-size: 0.875rem; //14px
       }
    }
 
@@ -258,9 +258,7 @@
 @include laps{
    //MAIN CONTENT
    .hero-name {
-      margin-top: 10vh;
-      position: relative;
-      max-width: max-content;
+    
       
       //'anabel' + hat
       & > div:first-child {
@@ -322,4 +320,176 @@
      right: 60px;
    }
    
+}
+
+//1440px
+@include desktops {
+   //HEADER 
+   header {
+      .margin {
+         height: 135px;
+         width: 84.43%;
+      }
+
+     
+
+      a, a.primary-btn {
+         width: 183px;
+         font-size: 1rem; //16px
+      }
+
+      a.sitepin {
+         margin-top: 20px;
+         margin-left: -60px;
+         img{
+            width: 161px;
+         }
+      }
+
+      a.primary-btn {
+         line-height: 22px;
+         padding: 16px 0px;
+         margin-left: 83px;
+      }
+
+      nav {
+         ul {
+            li {
+               &:not(:nth-child(1)) {
+                  margin-left: 80px;
+               }
+
+               a {
+
+               }
+            }
+         }
+      }
+   }
+
+   //MAIN CONTENT
+   .hero-name {
+      margin-top:11vh;
+
+       //'anabel' + hat
+      & > div:first-child {
+         margin-left: 50px;
+
+         h1 {
+            font-size: 12.5rem; //200px  //13.8vw
+            line-height: 280px;
+            line-height: 170px;
+            overflow: hidden;
+         }
+
+         img {
+            width: 160px;
+            top: -45%;
+            right: -63px;
+            transform: rotate(29.16deg);
+         }
+
+         &:after{
+            width: 35px;
+            height: 15px;
+            top: -7px;
+            right: 9px;
+         }  
+      }
+
+      //descr + trailer btn
+      & > div:nth-child(2) {
+         padding: 33px 36px 46px 33px;
+         transform: unset;
+         bottom: -280px;
+         right: -12.6vw;
+         transform: unset;
+
+         p {
+            line-height: 29px;
+            margin-bottom: 20px;
+         }
+
+         button {
+            line-height: 22px;
+
+            //play icon
+            img:nth-child(1) {
+               width: 56px;
+               margin-right: 13px;
+            }
+
+             //magic brush
+             img:nth-child(3) {
+               width: 98px;
+            }
+         }
+
+         p, button {
+            font-size: 16px;
+         }
+      }
+   }
+
+   .hero-img-in { 
+      width: 47.45vw;
+      max-width: unset;
+
+      //anabel + sunset
+      & > div {
+         margin-left: auto;
+         width: 150%;
+      }
+
+      //anabel
+      picture {
+        //  margin-left: -18px;
+         width: 100%;
+
+         img {
+            width: 100%;
+         }
+      }
+
+      & > div {
+         max-width: unset;
+         width: 67.36vw;
+         top: 46%;
+         
+         //sunset
+         img {
+            
+         }
+      }
+    }
+
+   button.animation-control {
+      right: 105px;
+   }
+}
+
+//1550px
+@include desktopsX {
+   //MAIN CONTENT
+   .hero-name {
+
+      //'anabel' + hat
+      & > div:first-child  {
+         transform: scale(1.2);
+
+      }
+
+      //descr + trailer btn
+      & > div:nth-child(2) {
+         right: -14.19vw;
+      }
+   }
+   .hero-img-in {
+      max-width: unset;
+      width: 48vw;
+      picture {
+        //  width: 48vw;
+        margin-left: auto;
+      }
+   }
 }

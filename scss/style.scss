@@ -290,6 +290,7 @@ main {
       margin-left: 1vw;
       max-width: 800px;
 
+      //purple lights effect
       & > div {
          position: absolute;
          z-index: 2;
@@ -317,12 +318,17 @@ main {
    }
 
    //anabel
-   & > img {
+   & > picture {
       position: relative;
       z-index: 2;
       width: 100%;
       margin: auto;
       margin-left: 5px;
+      margin-bottom: -10px;
+
+      img {
+         width: 100%;
+      }
    }
 }
 
