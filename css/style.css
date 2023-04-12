@@ -16,7 +16,6 @@ body {
 }
 
 * {
-  outline: 1px solid black;
   padding: 0;
   margin: 0;
 }
@@ -228,12 +227,16 @@ img {
   transition: 0.3s;
 }
 
+body {
+  background: url("/img/stars.png"), #100D1B;
+  overflow: hidden !important;
+}
+
 .closure {
   position: relative;
   width: 100%;
   height: 100vh;
   max-height: 100vh;
-  background: rgb(177, 177, 177);
 }
 
 nav.sidebar {
@@ -246,7 +249,7 @@ nav.sidebar {
   left: 0;
   padding: 0.1px;
   transition: 0.5s;
-  background: rgb(177, 177, 177);
+  background: #100D1B;
 }
 nav.sidebar > button {
   background: none;
@@ -354,7 +357,6 @@ header button.hamburger:hover {
 main {
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 .hero-name {
@@ -409,17 +411,18 @@ main {
   font-size: 12px;
   font-weight: 400;
   line-height: 22px;
+  position: relative;
+  z-index: 1;
 }
 .hero-name > div:nth-child(2) button {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(97.41deg, #D9D9D9 -192.76%, rgba(19, 0, 86, 0.38) -45.22%, rgba(217, 217, 217, 0) 111.83%);
-  -webkit-backdrop-filter: blur(22px);
-          backdrop-filter: blur(22px);
-  border: none;
+  background: none;
+  border: 1px solid rgba(217, 217, 217, 0.1764705882);
   color: white;
   width: 45%;
   margin: auto;
@@ -427,12 +430,19 @@ main {
   padding: 13px 0px;
   border-radius: 20px;
   font-weight: 500;
+  margin-bottom: -350px;
 }
 .hero-name > div:nth-child(2) button:hover {
   cursor: pointer;
 }
 .hero-name > div:nth-child(2) button img:nth-child(1) {
   width: 26px;
+  position: relative;
+  z-index: 1;
+}
+.hero-name > div:nth-child(2) button span {
+  position: relative;
+  z-index: 1;
 }
 .hero-name > div:nth-child(2) button img:nth-child(3) {
   transform: rotate(17.68deg);
@@ -440,9 +450,27 @@ main {
   position: absolute;
   margin-left: 57px;
   bottom: -30px;
+  z-index: 1;
 }
 .hero-name > div:nth-child(2) button img.hidden {
   display: none;
+}
+.hero-name > div:nth-child(2) button div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.01);
+  background: linear-gradient(97.41deg, hsla(0, 0%, 85%, 0.01), hsla(0, 0%, 85%, 0.01));
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+.hero-name > div:nth-child(2) button div.transparent {
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
 }
 
 .hero-img {
@@ -478,11 +506,13 @@ main {
   top: 0;
   width: 100%;
   height: 100%;
-  filter: blur(150.047px);
+  border-radius: 1005;
 }
 .hero-img-in > div > div div {
   width: 100%;
   height: 100%;
+  border: 100%;
+  filter: blur(150.047px);
   background: linear-gradient(150.95deg, #7D6EB1 7.67%, #7D6EB1 147.46%);
 }
 .hero-img-in > div img {
@@ -492,6 +522,9 @@ main {
   border-radius: 100%;
   z-index: 3;
   margin-top: 10px;
+}
+.hero-img-in > div img.scaled {
+  transform: scale(1.13);
 }
 .hero-img-in > picture {
   position: relative;
@@ -503,6 +536,29 @@ main {
 }
 .hero-img-in > picture img {
   width: 100%;
+}
+.hero-img-in div.side-glows {
+  all: unset;
+  border: 1px solid red;
+  width: 120vw;
+  max-width: 800px;
+  height: 80px;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  z-index: 3;
+}
+.hero-img-in div.side-glows div {
+  all: unset;
+  border-radius: 100%;
+  width: -moz-max-content;
+  width: max-content;
+  height: 100%;
+  margin-top: 10%;
+  aspect-ratio: 1/1;
+  filter: blur(20px);
+  background: linear-gradient(150.95deg, #7D6EB1 7.67%, #7D6EB1 147.46%);
 }
 
 button.animation-control {
@@ -563,6 +619,10 @@ button.animation-control img.hidden {
     width: 65px;
     margin-left: 70px;
     bottom: -50px;
+  }
+  .hero-img-in div.side-glows {
+    height: 150px;
+    filter: blur(30px);
   }
 }
 @media (min-width: 768px) {
@@ -629,6 +689,9 @@ button.animation-control img.hidden {
     color: white;
     text-decoration: none;
   }
+  header nav ul li a:hover {
+    opacity: 0.6;
+  }
   header a.primary-btn {
     display: block;
     width: 170px;
@@ -662,10 +725,10 @@ button.animation-control img.hidden {
     right: 2px;
   }
   .hero-name > div:nth-child(2) {
-    padding: 22px 25px 35px 22px;
+    padding: 27px 35px 35px 27px;
     position: absolute;
     z-index: 2;
-    bottom: -200px;
+    bottom: -220px;
     right: -180px;
     width: 307.2px;
     transform: scale(0.9);
@@ -724,6 +787,9 @@ button.animation-control img.hidden {
   }
   .hero-img-in {
     max-width: 600px;
+  }
+  .hero-img-in div.side-glows {
+    height: 180px;
   }
   button.animation-control {
     right: 60px;
@@ -802,7 +868,7 @@ button.animation-control img.hidden {
     font-size: 16px;
   }
   .hero-img-in {
-    width: 47.45vw;
+    width: 48.2vw;
     max-width: unset;
   }
   .hero-img-in > div {
@@ -820,20 +886,25 @@ button.animation-control img.hidden {
     width: 67.36vw;
     top: 46%;
   }
+  .hero-img-in div.side-glows {
+    height: 220px;
+    width: 67.36vw;
+    max-width: unset;
+  }
   button.animation-control {
     right: 105px;
   }
 }
 @media (min-width: 1550px) {
   .hero-name > div:first-child {
-    transform: scale(1.2);
+    transform: scale(1.03);
   }
   .hero-name > div:nth-child(2) {
     right: -14.19vw;
   }
   .hero-img-in {
     max-width: unset;
-    width: 48vw;
+    width: 38vw;
   }
   .hero-img-in picture {
     margin-left: auto;

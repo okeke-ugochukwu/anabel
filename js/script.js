@@ -10,7 +10,9 @@ var animationStatus = false;
 var animationControlBtn = document.querySelector('.animation-control');
 var staticMagicEye = document.querySelector('.magic-eye-static');
 var animatedMagicEye = document.querySelector('.magic-eye-ani');
-var animatedMagicBrush = document.querySelector('.magic-brush-ani');4
+var animatedMagicBrush = document.querySelector('.magic-brush-ani');
+var cardBlurBase = document.querySelector('.blur-base');
+var sunSet = document.querySelector('#sunset');
 
 function MINI_HOVER() {
    animationControlBtn.style.bottom = '4vh'
@@ -30,6 +32,9 @@ function TOGGLE_ANIMATION() {
 
       animatedMagicEye.classList.remove('shown');
       animatedMagicEye.classList.add('hidden');
+
+      cardBlurBase.classList.remove('transparent');
+      sunSet.classList.remove('scaled')
    }
    else {
       animationStatus = true
@@ -41,5 +46,8 @@ function TOGGLE_ANIMATION() {
       
       animatedMagicEye.classList.remove('hidden');
       animatedMagicEye.classList.add('shown');
+
+      cardBlurBase.classList.add('transparent');
+      sunSet.classList.add('scaled')
    }
 }

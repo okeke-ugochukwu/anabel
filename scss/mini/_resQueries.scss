@@ -49,6 +49,12 @@
          
       }
    }
+   .hero-img-in {
+      div.side-glows {
+         height: 150px;
+         filter: blur(30px);
+      }
+   }
 }
 
 //768px
@@ -159,6 +165,10 @@
                a {
                   color: $white;
                   text-decoration: none;
+
+                  &:hover {
+                     opacity: .6;
+                  }
                }
             }
          }
@@ -209,10 +219,10 @@
    
       //descr + trailer btn
       & > div:nth-child(2) {
-         padding: 22px 25px 35px 22px;
+         padding: 27px 35px 35px 27px;
          position: absolute;
          z-index: 2;
-         bottom: -200px;
+         bottom: -220px;
          right: -180px;
          width: 307.2px;
          transform: scale(.9);
@@ -314,7 +324,14 @@
 
    .hero-img-in {
       max-width: 600px;
-   }
+
+      div.side-glows {
+         height: 180px;
+
+         div {
+         }
+      }
+   }  
 
    button.animation-control {
      right: 60px;
@@ -432,7 +449,7 @@
    }
 
    .hero-img-in { 
-      width: 47.45vw;
+      width:  48.2vw;
       max-width: unset;
 
       //anabel + sunset
@@ -461,6 +478,16 @@
             
          }
       }
+
+      div.side-glows {
+         height: 220px;
+         width: 67.36vw;
+         max-width: unset;
+
+         div {
+
+         }
+      }
     }
 
    button.animation-control {
@@ -475,7 +502,7 @@
 
       //'anabel' + hat
       & > div:first-child  {
-         transform: scale(1.2);
+         transform: scale(1.03);
 
       }
 
@@ -486,7 +513,8 @@
    }
    .hero-img-in {
       max-width: unset;
-      width: 48vw;
+      width:38vw;
+      
       picture {
         //  width: 48vw;
         margin-left: auto;
