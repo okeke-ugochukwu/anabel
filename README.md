@@ -1,6 +1,6 @@
 # Landing Page Exploration
 
-![Design preview for the landing page exploration](/img/preview.png)
+![Design preview for the landing page exploration](img/preview.png)
 
 
 

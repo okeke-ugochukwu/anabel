@@ -9,8 +9,11 @@
    font-family: $Satoshi;
    transition: .3s;
 }
+html {
+   overflow: hidden !important;
+}
 body {
-   background: url('/img/stars.png'), $deepBlue;
+   background: url('img/stars.png'), $deepBlue;
    overflow: hidden !important;
 }
 
