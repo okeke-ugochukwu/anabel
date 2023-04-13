@@ -33,3 +33,8 @@
        @content;   
    }
 }
+@mixin desktopsXL {
+   @media (min-height: 1550px) {
+       @content;   
+   }
+}

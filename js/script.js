@@ -13,6 +13,7 @@ var animatedMagicEye = document.querySelector('.magic-eye-ani');
 var animatedMagicBrush = document.querySelector('.magic-brush-ani');
 var cardBlurBase = document.querySelector('.blur-base');
 var sunSet = document.querySelector('#sunset');
+var shootingStars = document.getElementsByClassName('shooting-star')
 
 function MINI_HOVER() {
    animationControlBtn.style.bottom = '4vh'
@@ -24,8 +25,17 @@ function MINI_HOVER_ALT() {
 
 function TOGGLE_ANIMATION() {
    if (animationStatus === true) {
-      animationStatus = false
-      animatedMagicBrush.classList.add('hidden');
+      animationStatus = false;
+
+      //decrase opacity of magic brush, then hide it in dom
+      setTimeout(() => {
+         animatedMagicBrush.classList.add('hidden');
+
+         setTimeout(() => {
+            animatedMagicBrush.style.display = "none"
+         }, 100)
+         
+      }, 800)
 
       staticMagicEye.classList.remove('hidden');
       staticMagicEye.classList.add('shown');
@@ -35,10 +45,58 @@ function TOGGLE_ANIMATION() {
 
       cardBlurBase.classList.remove('transparent');
       sunSet.classList.remove('scaled')
+
+      for (let i = 0; i < shootingStars.length; i++) {
+         const shootingStar = shootingStars[i];
+
+         shootingStar.style.display = 'block';
+
+      
+      }
    }
    else {
-      animationStatus = true
-      animatedMagicBrush.classList.remove('hidden');
+      animationStatus = true;
+      
+      //make magic brush visible in dom, then increase opacity
+      //after which translate the shooting stars
+      setTimeout(() => {
+         animatedMagicBrush.style.display = "block"
+         
+
+         setTimeout(() => {
+            animatedMagicBrush.classList.remove('hidden');
+         }, 300);
+
+
+         for (let i = 0; i < shootingStars.length; i++) {
+            const shootingStar = shootingStars[i];
+
+            shootingStar.style.display = 'block'
+            //delay second star a lil bit
+            if (i === 1) {     
+               setTimeout(() => {
+                  shootingStar.classList.add('translated');
+               }, 38)
+            }
+            else {           
+               shootingStar.classList.add('translated');
+            }   
+         }
+         
+      }, 1000)
+
+      //hide stars and return to origin once translate
+      setTimeout(() => {
+         for (let i = 0; i < shootingStars.length; i++) {
+            const shootingStar = shootingStars[i]; 
+
+            shootingStar.style.display = 'none'
+            shootingStar.classList.remove('translated');
+         }
+      }, 2000)
+
+
+      //NOTE TO SELF: TIMEOUTS ISN'T THE BEST WAY TO GO ABOUT THIS :)
 
 
       staticMagicEye.classList.remove('shown');

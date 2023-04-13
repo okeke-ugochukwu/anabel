@@ -188,7 +188,6 @@ main {
       img {
          width: 70px;
          position: absolute;
-         z-index: 2;
          top: -50%;
          right: -34px;
          transform: rotate(16.16deg);
@@ -265,10 +264,11 @@ main {
             margin-left: 57px;
             bottom: -30px;
             z-index: 1;
+            opacity: 1;
          }
          
          img.hidden {
-            display: none;
+            opacity: 0;
          }
 
          //blur effect base
@@ -310,6 +310,7 @@ main {
    max-width: 400px;
    margin: auto;
    position: relative;
+   z-index: 2;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -337,8 +338,9 @@ main {
          div {
             width: 100%;
             height: 100%;
-            border: 100%;
+            border-radius: 100%;
             filter: blur(150.047px);
+            transform: scale(1.3);
             background: linear-gradient(150.95deg, #7D6EB1 7.67%, #7D6EB1 147.46%);
          }
 
@@ -353,9 +355,11 @@ main {
          border-radius: 100%;
          z-index: 3;
          margin-top: 10px;
+         transition: 1s;
       }
       img.scaled {
-         transform: scale(1.13);
+         transform: scale(1.18);
+         opacity: 1;
       }
    }
 
@@ -402,6 +406,7 @@ main {
 
 button.animation-control {
    position: absolute;
+   border-radius: 100%;
    z-index: 4;
    bottom: 5vh;
    right: 30px;
@@ -417,7 +422,7 @@ button.animation-control {
 
    img {
       width: 100%;
-
+      
       //png
       &:nth-child(1) {
 
@@ -436,6 +441,40 @@ button.animation-control {
          display: none;
       }
    }
+
+   &:hover {
+      transition: .4s;
+      transform: scale(1.05);
+      box-shadow: 0px 8px 20px #00000080;
+   }
+}
+
+div.shooting-stars {
+   position: absolute;
+   top: 50vh;
+   left: -20vw;
+   width: 30px;
+   height: 30px;
+
+   img {
+      width: 100%;
+      opacity: .5;
+      filter: blur(4px);
+      position: absolute;
+      transition: 1.5s;
+
+      &:nth-child(1) {
+      }
+
+      &:nth-child(2) {
+         top: 50px;
+      }
+   }
+
+   img.translated {
+      transform: translate(140vw, -140vw);
+   }
+   
 }
 
 @import './mini/resQueries';

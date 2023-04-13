@@ -39,6 +39,11 @@ img {
   padding: 16px 0px;
   text-align: center;
 }
+.primary-btn:hover {
+  transition: 0.4s;
+  transform: scale(1.05);
+  box-shadow: 0px 5px 20px rgba(68, 55, 112, 0.631372549);
+}
 
 @font-face {
   font-family: "Franie";
@@ -383,7 +388,6 @@ main {
 .hero-name > div:first-child img {
   width: 70px;
   position: absolute;
-  z-index: 2;
   top: -50%;
   right: -34px;
   transform: rotate(16.16deg);
@@ -451,9 +455,10 @@ main {
   margin-left: 57px;
   bottom: -30px;
   z-index: 1;
+  opacity: 1;
 }
 .hero-name > div:nth-child(2) button img.hidden {
-  display: none;
+  opacity: 0;
 }
 .hero-name > div:nth-child(2) button div {
   width: 100%;
@@ -486,6 +491,7 @@ main {
   max-width: 400px;
   margin: auto;
   position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -511,8 +517,9 @@ main {
 .hero-img-in > div > div div {
   width: 100%;
   height: 100%;
-  border: 100%;
+  border-radius: 100%;
   filter: blur(150.047px);
+  transform: scale(1.3);
   background: linear-gradient(150.95deg, #7D6EB1 7.67%, #7D6EB1 147.46%);
 }
 .hero-img-in > div img {
@@ -522,9 +529,11 @@ main {
   border-radius: 100%;
   z-index: 3;
   margin-top: 10px;
+  transition: 1s;
 }
 .hero-img-in > div img.scaled {
-  transform: scale(1.13);
+  transform: scale(1.18);
+  opacity: 1;
 }
 .hero-img-in > picture {
   position: relative;
@@ -563,6 +572,7 @@ main {
 
 button.animation-control {
   position: absolute;
+  border-radius: 100%;
   z-index: 4;
   bottom: 5vh;
   right: 30px;
@@ -589,6 +599,32 @@ button.animation-control img.shown {
 }
 button.animation-control img.hidden {
   display: none;
+}
+button.animation-control:hover {
+  transition: 0.4s;
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5019607843);
+}
+
+div.shooting-stars {
+  position: absolute;
+  top: 50vh;
+  left: -20vw;
+  width: 30px;
+  height: 30px;
+}
+div.shooting-stars img {
+  width: 100%;
+  opacity: 0.5;
+  filter: blur(4px);
+  position: absolute;
+  transition: 1.5s;
+}
+div.shooting-stars img:nth-child(2) {
+  top: 50px;
+}
+div.shooting-stars img.translated {
+  transform: translate(140vw, -140vw);
 }
 
 @media (min-width: 600px) {
@@ -663,6 +699,10 @@ button.animation-control img.hidden {
   button.animation-control img:nth-child(2) {
     width: 125px;
   }
+  div.shooting-stars {
+    width: 80px;
+    top: 65vh;
+  }
 }
 @media (min-width: 1024px) {
   header .margin {
@@ -727,7 +767,7 @@ button.animation-control img.hidden {
   .hero-name > div:nth-child(2) {
     padding: 27px 35px 35px 27px;
     position: absolute;
-    z-index: 2;
+    z-index: 4;
     bottom: -220px;
     right: -180px;
     width: 307.2px;
@@ -758,6 +798,13 @@ button.animation-control img.hidden {
   }
   .hero-name > div:nth-child(2) p, .hero-name > div:nth-child(2) button {
     font-size: 14px;
+  }
+  div.shooting-stars {
+    width: 80px;
+    top: 85vh;
+  }
+  div.shooting-stars img:nth-child(2) {
+    top: 90px;
   }
 }
 @media (min-width: 1200px) {
@@ -839,8 +886,8 @@ button.animation-control img.hidden {
   }
   .hero-name > div:first-child:after {
     width: 35px;
-    height: 15px;
-    top: -7px;
+    height: 17px;
+    top: -9px;
     right: 9px;
   }
   .hero-name > div:nth-child(2) {
@@ -894,6 +941,13 @@ button.animation-control img.hidden {
   button.animation-control {
     right: 105px;
   }
+  div.shooting-stars {
+    width: 110px;
+    top: 85vh;
+  }
+  div.shooting-stars img {
+    transition: 2s;
+  }
 }
 @media (min-width: 1550px) {
   .hero-name > div:first-child {
@@ -904,7 +958,7 @@ button.animation-control img.hidden {
   }
   .hero-img-in {
     max-width: unset;
-    width: 38vw;
+    width: 76vh;
   }
   .hero-img-in picture {
     margin-left: auto;

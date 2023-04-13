@@ -1,4 +1,5 @@
 
+
 * {
 //    outline: 1px solid rgba(255, 255, 255, 0.062);
    padding: 0;
@@ -21,4 +22,11 @@ img {
    line-height: 22px;
    padding: 16px 0px;
    text-align: center;
+
+   &:hover {
+      transition: .4s;
+      transform: scale(1.05);
+      box-shadow: 0px 5px 20px #443770a1;
+     
+   }
 }

@@ -131,6 +131,11 @@
          }
       }
    } 
+
+   div.shooting-stars {
+      width: 80px;
+      top: 65vh;
+   }
 }
 
 //1024px 
@@ -221,7 +226,7 @@
       & > div:nth-child(2) {
          padding: 27px 35px 35px 27px;
          position: absolute;
-         z-index: 2;
+         z-index: 4;
          bottom: -220px;
          right: -180px;
          width: 307.2px;
@@ -261,6 +266,17 @@
         }  
       }
    
+   }
+
+   div.shooting-stars {
+      width: 80px;
+      top: 85vh;
+
+      img {
+         &:nth-child(2) {
+            top: 90px;
+         }
+      }
    }
 }
 
@@ -408,8 +424,8 @@
 
          &:after{
             width: 35px;
-            height: 15px;
-            top: -7px;
+            height: 17px;
+            top: -9px;
             right: 9px;
          }  
       }
@@ -493,6 +509,15 @@
    button.animation-control {
       right: 105px;
    }
+
+   div.shooting-stars {
+      width: 110px;
+      top: 85vh;
+
+     img {
+      transition: 2s;
+     }
+   }
 }
 
 //1550px
@@ -513,7 +538,7 @@
    }
    .hero-img-in {
       max-width: unset;
-      width:38vw;
+      width: 76vh;
       
       picture {
         //  width: 48vw;
