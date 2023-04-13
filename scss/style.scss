@@ -45,7 +45,7 @@ nav.sidebar {
    transition: .5s;
    background: $deepBlue;
 
-   //cloe btn
+   //close btn
    & > button {
       background: none;
       border: none;
@@ -78,6 +78,8 @@ nav.sidebar {
       li {
          display: block;
          margin-bottom: 20px;
+         margin-left: -25px;
+         opacity: 0;
        
          a {
             display: block;
@@ -87,6 +89,16 @@ nav.sidebar {
             line-height: 22px;
             text-decoration: none;
             color: $white;
+         }
+      }
+
+      li.animated {
+
+         @keyframes fadeInLeft {
+            100% {
+               margin-left: 0;
+               opacity: 1;
+            }
          }
       }
    }
@@ -428,6 +440,10 @@ button.animation-control {
    justify-content: center;
    @include hoverPointer;
 
+   box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+   transform: scale(1);
+   animation: pulse 1.5s infinite;
+
    img {
       width: 100%;
       
@@ -450,11 +466,26 @@ button.animation-control {
       }
    }
 
-   &:hover {
-      transition: .4s;
-      transform: scale(1.05);
-      box-shadow: 0px 8px 20px #00000080;
-   }
+   @keyframes pulse {
+      0% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+      }
+  
+      70% {
+          transform: scale(1);
+          box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+      }
+  
+      100% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+      }
+  }
+}
+
+button.animation-control.static {
+   animation: none;
 }
 
 div.shooting-stars {

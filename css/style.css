@@ -295,6 +295,8 @@ nav.sidebar ul {
 nav.sidebar ul li {
   display: block;
   margin-bottom: 20px;
+  margin-left: -25px;
+  opacity: 0;
 }
 nav.sidebar ul li a {
   display: block;
@@ -304,6 +306,12 @@ nav.sidebar ul li a {
   line-height: 22px;
   text-decoration: none;
   color: white;
+}
+@keyframes fadeInLeft {
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
 }
 nav.sidebar .primary-btn {
   display: block;
@@ -589,6 +597,9 @@ button.animation-control {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 0 0 rgb(0, 0, 0);
+  transform: scale(1);
+  animation: pulse 1.5s infinite;
 }
 button.animation-control:hover {
   cursor: pointer;
@@ -605,10 +616,23 @@ button.animation-control img.shown {
 button.animation-control img.hidden {
   display: none;
 }
-button.animation-control:hover {
-  transition: 0.4s;
-  transform: scale(1.05);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5019607843);
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+button.animation-control.static {
+  animation: none;
 }
 
 div.shooting-stars {
@@ -632,6 +656,13 @@ div.shooting-stars img.translated {
   transform: translate(140vw, -140vw);
 }
 
+@media (hover: hover) {
+  button.animation-control:hover {
+    transition: 0.4s;
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1019607843);
+  }
+}
 @media (min-width: 600px) {
   .hero-name > div:first-child h1 {
     font-size: 90px;

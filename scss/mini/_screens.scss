@@ -4,6 +4,12 @@
    }
 }
 
+@mixin hoverables {
+   @media (hover: hover) {
+      @content;
+   }
+}
+
 @mixin tabs {
    @media (min-width: 768px) {
        @content;   

@@ -1,9 +1,26 @@
 function CLOSE_SIDEBAR() {
    document.querySelector('.sidebar').classList.add('closed');
+
+   for (let i = 0; i < sideBarLinks.length; i++) {
+      const navLink = sideBarLinks[i];
+
+      setTimeout(() => {
+         navLink.style.animation = ""
+      }, 400);
+   }
 }
 
 function OPEN_SIDEBAR() {
+
    document.querySelector('.sidebar').classList.remove('closed');
+
+   for (let i = 0; i < sideBarLinks.length; i++) {
+      const navLink = sideBarLinks[i];
+
+      setTimeout(() => {
+         navLink.style.animation = `.2s fadeInLeft ${i * 0.1}s linear both`
+      }, 400);
+   }
 }
 
 var animationStatus = false;
@@ -13,7 +30,8 @@ var animatedMagicEye = document.querySelector('.magic-eye-ani');
 var animatedMagicBrush = document.querySelector('.magic-brush-ani');
 var cardBlurBase = document.querySelector('.blur-base');
 var sunSet = document.querySelector('#sunset');
-var shootingStars = document.getElementsByClassName('shooting-star')
+var shootingStars = document.getElementsByClassName('shooting-star');
+var sideBarLinks = document.getElementsByClassName('sidebar-link');
 
 function MINI_HOVER() {
    animationControlBtn.style.bottom = '4vh'
@@ -45,6 +63,7 @@ function TOGGLE_ANIMATION() {
 
       cardBlurBase.classList.remove('transparent');
       sunSet.classList.remove('scaled')
+      animationControlBtn.classList.remove('static')
 
       for (let i = 0; i < shootingStars.length; i++) {
          const shootingStar = shootingStars[i];
@@ -107,5 +126,6 @@ function TOGGLE_ANIMATION() {
 
       cardBlurBase.classList.add('transparent');
       sunSet.classList.add('scaled')
+      animationControlBtn.classList.add('static')
    }
 }

@@ -1,5 +1,17 @@
 @import './screens';
 
+@include hoverables {
+   
+button.animation-control {
+   &:hover {
+      transition: .4s;
+      transform: scale(1.05);
+      box-shadow: 0px 8px 20px #0000001a;
+   }
+}
+
+}
+
 //600px
 @include tabs-mini {
    //MAIN CONTENT
