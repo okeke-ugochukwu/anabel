@@ -237,7 +237,9 @@ html {
 }
 
 body {
-  background: url("img/stars.png"), #100D1B;
+  background: url("../img/stars.png"), #100D1B;
+  max-height: 100vh;
+  min-height: 100vh;
   overflow: hidden !important;
 }
 
