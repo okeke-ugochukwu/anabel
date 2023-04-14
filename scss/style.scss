@@ -51,7 +51,18 @@ div.preloader.hidden {
    width: 200px;
    height: 140px;
    position: relative;
+   margin-top: -50px;
    transform: scale(0.6);
+   animation: 1.5s hover infinite both;
+
+   @keyframes hover {
+      50% {
+         margin-top: 50px;
+      }
+      100% {
+         margin-top: -50px;
+      }
+   }
  }
  .loader:before, .loader:after {
    --r: -6deg;
